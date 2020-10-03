@@ -24,7 +24,7 @@ const form = (props) => {
             </div>
             <div className='checkbox-container'>
                 <input onChange={props.change} type='checkbox' name='checkbox' required></input>
-                <label htmlFor='checkbox' class='checkbox'>אני מסכים ומאשר את ה<a href="https://static.spokesperson.gincher.net/idf.il/2019/04/caveret/assets/terms.pdf">תקנון</a>
+                <label htmlFor='checkbox' class='checkbox'>אני מסכים ומאשר את ה<a href="https://idfsite.azurewebsites.net/miniprojects/sukotquiz/terms.html" target='_blank'>תקנון</a>
                 </label>
             </div>
             <input className='start-button' type='submit' name='start' value='התחל' onClick={props.start}></input>

@@ -4,6 +4,7 @@
     direction: rtl;
     font-family: 'Assistant', sans-serif;
     outline: 0;
+    font-weight: 700;
 }
 body, html {
     width: 100%;
@@ -28,7 +29,7 @@ body, html {
     background-color: rgb(255, 195, 15);
     width: 100%;
     height: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
     box-sizing: border-box;
     font-size: 20px;
     position: relative;
@@ -54,40 +55,41 @@ body, html {
     bottom: 10px;
 }
 .open-screen img:nth-of-type(4) {
-    right: 20px;
-    bottom: 20px;
+    right: 0px;
+    bottom: 0px;
+    width: 200px;
 }
 .open-screen .text {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .open-screen h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 .open-screen h1 span {
     display: block;
     line-height: 95%;
-    font-size: 5rem;
-    font-weight: 500;
+    font-size: 3.5rem;
 }
 .open-screen h1 span:nth-of-type(1) {
     color: white;
-    font-size: 3.25rem;
+    font-size: 2.5rem;
 }
 .open-screen p {
     font-size: 1.5rem;
     margin-top: 40px;
-    width: 80%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 40px auto 0 auto;
 }
 .open-screen button {
     border: 0;
     background: transparent;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'GveretLevin', sans-serif;
+    font-style: italic;
     text-decoration: underline;
     cursor: pointer;
-    padding: 10px 20px;
+    margin-top: 20px;
 }
 .question-title-container {
     margin-top: 20px;
@@ -193,6 +195,7 @@ body, html {
 }
 .form-title {
     font-family: 'GveretLevin', sans-serif;
+    font-style: italic;
     font-size: 3rem;
     margin: 40px auto;
 }
@@ -304,7 +307,7 @@ label.checkbox::after {
     -o-transform: scale(1);
 }
 .start-button {
-    font-size: 30px;
+    font-size: 15px;
     padding: 5px 15px;
     margin: 35px auto;
     background: transparent;
@@ -323,6 +326,7 @@ label.checkbox::after {
     margin: 0 5px;
     font-size: 1.5rem;
     font-family: 'GveretLevin', sans-serif;
+    font-style: italic;
 }
 .ending-screen {
     padding:30px;
@@ -364,6 +368,7 @@ label.checkbox::after {
 }
 .loading-screen h1 {
     font-family: 'GveretLevin', sans-serif;
+    font-style: italic;
     font-size: 50px;
 }
 .loading-screen img {
@@ -413,7 +418,7 @@ label.checkbox::after {
     .quiz button {
         width: 85%; height: fit-content;
         white-space: normal;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 15px 0;
         margin-top: 10px;
         cursor: pointer;
@@ -432,5 +437,53 @@ label.checkbox::after {
     }
     h3.question-title {
         font-size: 1.5rem;
+    }
+    .open-screen .text {
+        margin-top: 50px;
+    }
+    .open-screen .text h2 {
+        font-size: 1.5rem;
+    }
+    .open-screen .text h1 span:nth-of-type(1) {
+        font-size: 2rem;
+    }
+    .open-screen .text h1 span:nth-of-type(2) {
+        font-size: 3rem;
+    }
+    .open-screen p {
+        margin: 10px auto;
+        font-size: 1.25rem;
+    }
+    .open-screen button {
+        font-size: 1.75rem;
+    }
+    .form .form-title {
+        font-size: 2rem;
+        margin: 20px auto;
+    }
+    .form-grid {
+        justify-content: flex-start;
+    }
+    .form-grid .input {
+        margin: 10px 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%;
+    }
+    .form-grid .input input {
+        width: 80%;
+        padding: 5px 10px;
+    }
+    label[for='checkbox'] {
+        font-size: 1.25rem;
+    }
+    .form-grid h3.form-disclaimer {
+        font-size: 1.15rem;
+    }
+    .open-screen img:nth-of-type(4) {
+        right: 0px;
+        bottom: 0px;
+        width: 150px;
     }
 }
