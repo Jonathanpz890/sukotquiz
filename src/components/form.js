@@ -10,16 +10,8 @@ const form = (props) => {
                     <input onChange={props.change} type='text' name='name' required></input>
                 </div>
                 <div className='input'>
-                    <label htmlFor='id'>תעודת זהות:</label>
-                    <input onChange={props.change} type='text' name='id' required></input>
-                </div>
-                <div className='input'>
                     <label htmlFor='phone'>מספר טלפון:</label>
                     <input onChange={props.change} type='text' name='phone' required></input>
-                </div>
-                <div className='input'>
-                    <label htmlFor='email'>כתובת דוא״ל:</label>
-                    <input onChange={props.change} type='text' name='email' required></input>
                 </div>
             </div>
             <div className='checkbox-container'>

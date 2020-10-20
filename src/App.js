@@ -692,9 +692,7 @@ class App extends Component {
             },
         ],
         name: '',
-        id: '',
         phone: '',
-        email: '',
         gameGoing: false,
         timer: null,
         questionNum: 0,
@@ -807,36 +805,24 @@ class App extends Component {
         let checkbox = document.querySelector('.form input[type="checkbox"]');
         if (inputs[0].value !== '') {
             if (inputs[1].value !== '') {
-                if (inputs[2].value !== '') {
-                    if (inputs[3].value !== '') {
-                        if (checkbox.checked) {
-                            document.querySelector('.start-button').classList.add('start-button-click');
-                        } else {
-                            document.querySelector('.start-button').classList.remove('start-button-click');
-                        }
-                    } else {
-                        document.querySelector('.start-button').classList.remove('start-button-click');
-                    }
+                if (checkbox.checked) {
+                    document.querySelector('.start-button').classList.add('start-button-click');
                 } else {
                     document.querySelector('.start-button').classList.remove('start-button-click');
-                }   
+                }
             } else {
                 document.querySelector('.start-button').classList.remove('start-button-click');
             }
         } else {
             document.querySelector('.start-button').classList.remove('start-button-click');
-        }
+        }   
         let target = event.target;
         let value = event.target.value;
         if (target === inputs[0]) {
             this.setState({name: value})
         } else if (target === inputs[1]) {
-            this.setState({id: value})
-        } else if (target === inputs[2]) {
             this.setState({phone: value})
-        } else if (target === inputs[3]) {
-            this.setState({email: value})
-        } 
+        }
     }
     submitForm = () => {
         this.setState({
@@ -863,18 +849,6 @@ class App extends Component {
             fourthScreen: true,
             gameGoing: false,
         })
-        setTimeout(() => {
-            Database.addData({
-                name: this.state.name,
-                id: this.state.id,
-                phone: this.state.phone,
-                email: this.state.email,
-                score: this.state.score.toString(),
-                questionsAnswered: this.state.questionsAnswered.toString(),
-                timeLeft: this.state.timeLeft.toString(),
-                timeOfSubmission: new Date(),
-            })
-        }, 5000)
     }
     componentDidMount() {
         this.shuffleQuestions();
